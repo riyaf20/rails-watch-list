@@ -1,8 +1,15 @@
-<h1> All Movie Lists </h1>
-<ul>
+<div class="banner-container">
+  <div class="banner-nav-bar">
+
+  <div><h1><i class="fas fa-play"></i><span class="logo-title"> All Lists of Movies </span></h1></div>
+
+<ul class="banner-ul">
  <% @lists.each do |list| %>
    <li><%= link_to list.name, list_path(list) %></li>
  <% end %>
 </ul>
 
-<%= link_to "Create New List", new_list_path %>
+<p class = "btn-style"> <%= link_to "Create New List", new_list_path %> </p>
+
+  </div>
+</div>

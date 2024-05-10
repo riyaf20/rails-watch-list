@@ -1,5 +1,20 @@
-<%= form_with model: @list do |l| %>
-  <%= l.label :name %>
-  <%= l.text_field :name %>
-  <%= l.submit %>
-<% end %>
+<div class="container">
+  <div class="row new-form">
+    <div class="col-lg-6 left-bg-list">
+    </div>
+
+    <div class="col-lg-6 right-bg" >
+
+    <%= form_with model: @list do |l| %>
+      <%= l.label :name %>
+      <%= l.text_field :name %>
+      <%= l.submit %>
+    <% end %>
+
+    <div class="btn-style">
+    <%= link_to "Back to All Movie Lists", lists_path %>
+    </div>
+
+    </div>
+  </div>
+</div>

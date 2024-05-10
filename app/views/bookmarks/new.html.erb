@@ -1,5 +1,19 @@
+<%= render 'header' %>
+
+<div class="container">
+  <div class="row new-form">
+    <div class="col-lg-6 left-bg-list">
+    </div>
+    <div class="col-lg-6 right-bg" >
+
+
+
 <%= simple_form_for [@list, @bookmark] do |lb| %>
   <%= lb.input :comment %>
   <%= lb.association :movie %>
   <%= lb.submit %>
 <% end %>
+
+    </div>
+  </div>
+</div>
