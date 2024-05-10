@@ -1,0 +1,21 @@
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #EEBC2F;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-flat:hover {
+  background: #EEBC2F;
+  color: white;
+  text-decoration: none;
+}
+
+.centered-button {
+  text-align: center;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}

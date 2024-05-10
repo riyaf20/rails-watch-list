@@ -1,26 +1,33 @@
-<div class="container">
-  <div class="movie-content">
-    <div class="row">
-      <h2> Movies in <%= @list.name %> </h2>
+<div>
+   <h2 class = "text-center my-4 display-4"> Movies in <%= @list.name %> </h2>
 
-<div class="movies-grid">
-
+<div class = "cards">
 <% @list.bookmarks.each do |bookmark| %>
-  <div class="box-poster">
-    <img class="img-poster" src="<%= bookmark.movie.poster_url %>">
-    <p class = "movie-path"> <%= bookmark.movie.title %>: <%= bookmark.comment %> </p>
-      <div class="btn-style">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= bookmark.movie.poster_url %>')">
+    <%= bookmark.movie.title %> <br>
+    Comment: <%= bookmark.comment %>
+      <div class="btn btn-flat text-decoration-none">
         <%= link_to "Delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
       </div>
   <% end %>
   </div>
 </div>
 
-<div class="btn-style">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="btn btn-flat text-decoration-none">
   <%= link_to "Back to All Movie Lists", lists_path %>
+</div>
+
+<div class="btn btn-flat text-decoration-none">
+  <div class="centered-button">
+
   <%= link_to "Add New Bookmark", new_list_bookmark_path(@list) %>
 </div>
 
-    </div>
-  </div>
 </div>

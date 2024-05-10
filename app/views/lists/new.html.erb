@@ -1,20 +1,13 @@
-<div class="container">
-  <div class="row new-form">
-    <div class="col-lg-6 left-bg-list">
-    </div>
+<div>
 
-    <div class="col-lg-6 right-bg" >
+  <%= simple_form_for(@list) do |l| %>
+    <%= l.input :name %>
+    <%= l.input :photo, as: :file %>
+    <%= l.button :submit %>
+  <% end %>
 
-    <%= simple_form_for(@list) do |l| %>
-      <%= l.input :name %>
-      <%= l.input :photo, as: :file %>
-      <%= l.button :submit %>
-    <% end %>
-
-    <div class="btn-style">
-    <%= link_to "Back to All Movie Lists", lists_path %>
-    </div>
-
-    </div>
+  <div class="btn btn-flat text-decoration-none">
+  <%= link_to "Back to All Movie Lists", lists_path %>
   </div>
+
 </div>
