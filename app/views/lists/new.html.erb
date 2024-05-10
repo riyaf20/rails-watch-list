@@ -5,10 +5,10 @@
 
     <div class="col-lg-6 right-bg" >
 
-    <%= form_with model: @list do |l| %>
-      <%= l.label :name %>
-      <%= l.text_field :name %>
-      <%= l.submit %>
+    <%= simple_form_for(@list) do |l| %>
+      <%= l.input :name %>
+      <%= l.input :photo, as: :file %>
+      <%= l.button :submit %>
     <% end %>
 
     <div class="btn-style">
